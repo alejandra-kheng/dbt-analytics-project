@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: healthcare
+    database: "alejandra.kheng"
+    schema: public
+    tables:
+      - name: departments
+        description: Raw departments table with organizational units
+      - name: projects
+        description: Raw projects table with task completion tracking

@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_departments
+    description: Cleaned and standardized departments data
+    columns:
+      - name: dept_id
+        description: Primary key for departments
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_projects
+    description: Cleaned projects with completion percentage
+    columns:
+      - name: project_id
+        description: Primary key for projects
+        tests:
+          - unique
+          - not_null
+      - name: completion_pct
+        description: Percentage of tasks completed
+        tests:
+          - not_null

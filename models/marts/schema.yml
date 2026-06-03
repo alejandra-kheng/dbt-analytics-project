@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: mart_project_summary
+    description: Business-ready project summary with variance analysis and performance tiers
+    columns:
+      - name: project_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+      - name: completion_pct
+        description: Percentage of tasks completed
+        tests:
+          - not_null
+
+  - name: mart_dept_health
+    description: Department health scorecard aggregating project performance
+    columns:
+      - name: department_name
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+          
